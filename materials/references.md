@@ -2,6 +2,7 @@
 
 ## 내 자료
 - [CCAR-F 학습 가이드 (PDF)](ccar-f-study-guide.pdf) — 판단 원칙, 도메인별 정리, 연습문제 15, 10회 플랜
+- [쉬운 요약 교재 (PDF)](easy-guide.pdf) / [원본 md](easy-guide.md) — 도메인별 비유·핵심개념·비교표·함정·셀프체크, 용어집
 
 ## 공부 중인 외부 자료
 - 네이버 블로그 정리글: https://blog.naver.com/beyond-zero/224289567944

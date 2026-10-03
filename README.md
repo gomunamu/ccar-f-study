@@ -23,7 +23,7 @@ concepts.yaml   도메인 → 개념 태그 목록 (모든 문제는 개념 태�
 exercises/      회차별 문제지 (session-NN-*/quiz.md)
 keys/           회차별 정답·해설 (풀기 전에는 열지 않기)
 results/        회차별 내 답안 (session-NN.yaml)
-scripts/        채점(score.py)·출력용 PDF 생성(build_pdf.py)
+scripts/        채점(score.py), 문제지 PDF(build_pdf.py), 교재 PDF(md2pdf.py)
 mastery.json    개념/도메인별 누적 숙련도 (score.py가 갱신)
 ```
 
