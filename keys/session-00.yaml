@@ -1,0 +1,25 @@
+# Session 00 정답·해설 — 다 풀기 전에는 열지 말 것
+session: "00"
+title: Diagnostic
+questions:
+  Q1:  {answer: [B], concepts: [D1.pattern], why: "절차·순서가 고정이면 code로 정의한 workflow가 가장 단순하고 예측 가능. agent 자율성이 필요 없는 곳에 multi-agent는 과설계."}
+  Q2:  {answer: [C], concepts: [D1.parallel], why: "1단계 결과가 2단계 입력을 결정 → 순차. 경쟁사별 조사는 서로 독립 → 병렬. 전형적인 hybrid."}
+  Q3:  {answer: [A], concepts: [D1.loop], why: "stop_reason이 tool_use면 tool 실행 후 tool_result를 user 메시지로 붙여 재호출. end_turn이면 종료. 실무에선 max turn 안전장치를 함께 둔다."}
+  Q4:  {answer: [D], concepts: [D1.hooks], why: "정책·감사는 모델 판단이 아닌 deterministic enforcement. PreToolUse는 차단, PostToolUse는 기록에 적합."}
+  Q5:  {answer: [C], concepts: [D1.session], why: "원 상태 보존 + 독립 분기 탐색 = fork. resume은 같은 흐름을 이어가는 것."}
+  Q6:  {answer: [B, D], concepts: [D1.handoff], why: "subagent의 가치는 context 격리. 입력은 task-specific로 최소화, 출력은 압축된 structured 결과로. 공유 쓰기 자격증명은 least privilege 위반."}
+  Q7:  {answer: [D], concepts: [D2.tool-desc], why: "tool 선택 오류는 classifier 추가 전에 description/schema로 '언제 쓰는지'를 명시하는 것이 가장 작은 수정."}
+  Q8:  {answer: [A], concepts: [D2.error], why: "tool_result에 is_error: true + 오류 유형·재시도 가능 여부를 주면 모델이 대기/재시도/우회를 판단할 수 있다. loop를 죽이거나 빈 결과를 주면 복구 불가."}
+  Q9:  {answer: [B], concepts: [D2.mcp], why: "팀 공유는 project scope의 .mcp.json을 repo에 커밋. 비밀값은 환경변수 확장으로 분리. user scope는 개인용."}
+  Q10: {answer: [C], concepts: [D2.surface], why: "tool이 많을수록 선택 혼란·context 비용 증가. 역할별로 필요한 tool만 노출하는 것이 첫 조치."}
+  Q11: {answer: [C], concepts: [D3.settings], why: "우선순위: managed policy > CLI 인자 > project local > project shared > user. 조직 정책은 하위 설정으로 뒤집을 수 없다."}
+  Q12: {answer: [D], concepts: [D3.extensions], why: "가끔 필요한 절차적 지식 + 관련 있을 때 자동 적용 = Skill (description만 상시 노출, 본문은 필요 시 로드). CLAUDE.md는 매 세션 로드되어 context 낭비."}
+  Q13: {answer: [A], concepts: [D3.headless], why: "CI는 non-interactive: -p(print) 모드, --output-format json으로 파싱 가능, max turns와 allowed tools로 범위·권한 제한."}
+  Q14: {answer: [A, C], concepts: [D3.claude-md], why: "CLAUDE.md는 작업 지침(명령어, 코딩 규칙). 반드시 막아야 하는 것(force push, .env 읽기)과 감사 로깅은 hook/permission/managed policy로 강제."}
+  Q15: {answer: [C], concepts: [D4.structured], why: "machine consumption + 필수 필드/타입 보장 → schema 기반 structured output이 근본 해결. regex·reviewer는 증상 처리."}
+  Q16: {answer: [A], concepts: [D4.fewshot], why: "경계 사례 일관성은 해당 경계를 보여주는 few-shot이 가장 효과적. 모델 교체보다 작은 수정."}
+  Q17: {answer: [D], concepts: [D4.validation], why: "targeted retry: 실패 원인을 피드백하고 횟수 제한, 이후 fallback/human. 무한 동일 재시도·조용한 누락은 금물."}
+  Q18: {answer: [B], concepts: [D4.review], why: "reviewer는 오류 비용이 높고 검토 기준이 명시 가능할 때만. 기본값으로 붙이면 비용·지연·복잡성 증가."}
+  Q19: {answer: [A], concepts: [D5.caching], why: "캐시는 prefix 일치 기반. 변하지 않는 tools → system → 문서를 앞에 두고 그 끝에 cache_control. 변하는 질문은 뒤."}
+  Q20: {answer: [C], concepts: [D5.reliability], why: "결과 불명확한 비가역 작업은 idempotency key + 상태 조회 후 재실행. 즉시 재시도는 이중 환불 위험."}
+  Q21: {answer: [B], concepts: [D5.context], why: "긴 작업은 진행상황·결정사항을 외부 state(checkpoint)로 분리해 context 압축과 무관하게 이어가게 한다."}

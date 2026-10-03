@@ -1,0 +1,47 @@
+# 도메인 → 개념 태그. 모든 문제는 하나 이상의 개념 태그를 가진다.
+domains:
+  D1:
+    name: Agentic Architecture & Orchestration
+    weight: 0.27
+    concepts:
+      D1.loop: agentic loop, stop_reason, 종료 조건/max turns
+      D1.pattern: fixed workflow vs single agent vs coordinator-subagent 선택
+      D1.parallel: 병렬 vs 순차 vs hybrid (의존성 판단)
+      D1.handoff: subagent에 넘길 context / 결과 반환 형식
+      D1.hooks: hook으로 정책 강제 (PreToolUse/PostToolUse)
+      D1.session: resume / fork / checkpoint
+  D2:
+    name: Tool Design & MCP Integration
+    weight: 0.18
+    concepts:
+      D2.tool-desc: tool name/description/schema로 routing 개선
+      D2.error: structured error, is_error, retryable
+      D2.mcp: MCP 개념, scope(.mcp.json 등), 인증/권한
+      D2.surface: tool surface 최소화, 역할별 tool 제한
+      D2.builtin: built-in vs custom tool 판단
+  D3:
+    name: Claude Code Configuration & Workflows
+    weight: 0.20
+    concepts:
+      D3.claude-md: CLAUDE.md에 넣을 것 / 넣지 말 것
+      D3.settings: settings 계층과 우선순위, permissions
+      D3.plan-mode: plan mode 사용 판단
+      D3.extensions: skill / command / hook / subagent 구분
+      D3.headless: claude -p, CI/CD non-interactive 실행
+  D4:
+    name: Prompt Engineering & Structured Output
+    weight: 0.20
+    concepts:
+      D4.clarity: 명확한 지시, 성공 기준
+      D4.fewshot: few-shot 예시 설계
+      D4.structured: schema 기반 structured output
+      D4.validation: validation + targeted retry
+      D4.review: multi-pass review 사용 판단
+  D5:
+    name: Context Management & Reliability
+    weight: 0.15
+    concepts:
+      D5.context: selective context, summarization, 외부 state
+      D5.caching: prompt caching
+      D5.ambiguity: clarification vs 자율 진행
+      D5.reliability: idempotency, partial failure, timeout, audit
