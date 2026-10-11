@@ -1,0 +1,145 @@
+{
+  "sessions": [
+    {
+      "session": "00",
+      "date": "2026-10-11",
+      "score": "14/21",
+      "domain_acc": {
+        "D1": 0.5,
+        "D2": 0.25,
+        "D3": 1.0,
+        "D4": 0.75,
+        "D5": 1.0
+      },
+      "weighted_estimate": 680
+    }
+  ],
+  "concepts": {
+    "D1.pattern": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D1.parallel": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D1.loop": {
+      "attempts": 1,
+      "correct": 0,
+      "p": 0.3,
+      "last_seen": "00"
+    },
+    "D1.hooks": {
+      "attempts": 1,
+      "correct": 0,
+      "p": 0.3,
+      "last_seen": "00"
+    },
+    "D1.session": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D1.handoff": {
+      "attempts": 1,
+      "correct": 0,
+      "p": 0.3,
+      "last_seen": "00"
+    },
+    "D2.tool-desc": {
+      "attempts": 1,
+      "correct": 0,
+      "p": 0.3,
+      "last_seen": "00"
+    },
+    "D2.error": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D2.mcp": {
+      "attempts": 1,
+      "correct": 0,
+      "p": 0.3,
+      "last_seen": "00"
+    },
+    "D2.surface": {
+      "attempts": 1,
+      "correct": 0,
+      "p": 0.3,
+      "last_seen": "00"
+    },
+    "D3.settings": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D3.extensions": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D3.headless": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D3.claude-md": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D4.structured": {
+      "attempts": 1,
+      "correct": 0,
+      "p": 0.3,
+      "last_seen": "00"
+    },
+    "D4.fewshot": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D4.validation": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D4.review": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D5.caching": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D5.reliability": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    },
+    "D5.context": {
+      "attempts": 1,
+      "correct": 1,
+      "p": 0.7,
+      "last_seen": "00"
+    }
+  }
+}

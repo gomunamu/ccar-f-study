@@ -1,26 +1,66 @@
-# Session 00 답안지
-# answer: 보기 문자 (복수 정답 문항은 "BD" 처럼), confidence: 1(찍음)~5(확실)
-date: ""
+date: '2026-10-11'
 minutes: null
 answers:
-  Q1:  {answer: "", confidence: null}
-  Q2:  {answer: "", confidence: null}
-  Q3:  {answer: "", confidence: null}
-  Q4:  {answer: "", confidence: null}
-  Q5:  {answer: "", confidence: null}
-  Q6:  {answer: "", confidence: null}
-  Q7:  {answer: "", confidence: null}
-  Q8:  {answer: "", confidence: null}
-  Q9:  {answer: "", confidence: null}
-  Q10: {answer: "", confidence: null}
-  Q11: {answer: "", confidence: null}
-  Q12: {answer: "", confidence: null}
-  Q13: {answer: "", confidence: null}
-  Q14: {answer: "", confidence: null}
-  Q15: {answer: "", confidence: null}
-  Q16: {answer: "", confidence: null}
-  Q17: {answer: "", confidence: null}
-  Q18: {answer: "", confidence: null}
-  Q19: {answer: "", confidence: null}
-  Q20: {answer: "", confidence: null}
-  Q21: {answer: "", confidence: null}
+  Q1:
+    answer: B
+    confidence: 4
+  Q2:
+    answer: C
+    confidence: 4
+  Q3:
+    answer: B
+    confidence: 3
+  Q4:
+    answer: A
+    confidence: 2
+  Q5:
+    answer: C
+    confidence: 5
+  Q6:
+    answer: AD
+    confidence: 1
+  Q7:
+    answer: A
+    confidence: 2
+  Q8:
+    answer: A
+    confidence: 5
+  Q9:
+    answer: C
+    confidence: 4
+  Q10:
+    answer: B
+    confidence: 3
+  Q11:
+    answer: C
+    confidence: 5
+  Q12:
+    answer: D
+    confidence: 2
+  Q13:
+    answer: A
+    confidence: 5
+  Q14:
+    answer: AC
+    confidence: 1
+  Q15:
+    answer: A
+    confidence: 4
+  Q16:
+    answer: A
+    confidence: 3
+  Q17:
+    answer: D
+    confidence: 3
+  Q18:
+    answer: B
+    confidence: 3
+  Q19:
+    answer: A
+    confidence: 4
+  Q20:
+    answer: C
+    confidence: 4
+  Q21:
+    answer: B
+    confidence: 4
