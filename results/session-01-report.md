@@ -50,3 +50,7 @@
 
 - **Q10** (AD) multi-agent는 (1) 독립 작업 + context 격리 이득, (2) 전문화·권한 분리가 필요할 때 정당화된다. 고정 순서는 workflow, 단순 질의는 단일 호출.
 - **Q11** (A) 독립 context + 도구 제한 + 위임해서 결과를 받음 = subagent(.claude/agents/). CLAUDE.md는 상시 지침, hook은 이벤트 강제, permission은 허용 범위.
+
+## 메모
+
+- Q10: 문제를 반대로 읽음(개념 오류 아님). 독해 실수 보정 시 14/15.

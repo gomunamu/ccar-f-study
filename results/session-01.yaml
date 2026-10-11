@@ -46,3 +46,5 @@ answers:
   Q15:
     answer: A
     confidence: 3
+notes:
+  Q10: "문제를 반대로 읽음(정당화되지 않는 경우로 이해). 개념 오류가 아닌 독해 실수 — NOT/정당화 여부 문항 주의"

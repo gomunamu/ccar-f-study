@@ -1,0 +1,20 @@
+# Session 02 정답·해설 — 다 풀기 전에는 열지 말 것
+session: "02"
+title: D3·D1 Consolidation
+questions:
+  Q1:  {answer: [C], concepts: [D3.extensions], why: "이름으로 호출 + 보조 파일 번들 + 필요할 때만 로드 = skill. description만 상시 노출되고 본문·스크립트는 호출 시 로드. CLAUDE.md는 매 세션 context 소모, hook은 강제 장치, subagent는 위임 대상."}
+  Q2:  {answer: [D], concepts: [D3.extensions, D1.hooks], why: "hook은 이벤트 시점의 결정적 실행(차단·후처리·컨텍스트 주입). 설계 관례를 '가르치는' 것은 지식이므로 CLAUDE.md/rules/skill 영역."}
+  Q3:  {answer: [B], concepts: [D3.extensions, D1.handoff], why: "대량 탐색은 subagent에 위임해 별도 context에서 처리하고 요약만 받는다. 메인 context 보호가 subagent의 핵심 용도. plan mode는 수정 방지일 뿐 context 문제를 풀지 않는다."}
+  Q4:  {answer: [A], concepts: [D3.settings], why: "나만 + 이 프로젝트만 = .claude/settings.local.json(gitignore). settings.json은 팀 공유, ~/.claude/settings.json은 모든 프로젝트. CLAUDE.md는 권한을 주지 못한다."}
+  Q5:  {answer: [C], concepts: [D3.headless], why: "-p로 non-interactive, --output-format json + --json-schema로 schema 준수 결과를 structured_output 필드에 받는다. regex 파싱은 취약."}
+  Q6:  {answer: [B], concepts: [D1.pattern], why: "고정 순차 파이프라인은 workflow가 더 단순·안정. subagent는 context 격리, 독립 병렬 작업, 역할별 권한 분리에 정당화된다."}
+  Q7:  {answer: [D], concepts: [D1.pattern], why: "분류 후 유형별 고정 절차 = routing workflow. 단계가 변하지 않으므로 자율 agent나 즉흥 계획은 과설계, 투표는 비용만 늘린다."}
+  Q8:  {answer: [A], concepts: [D1.hooks], why: "파일이 바뀐 뒤 처리해야 하므로 PostToolUse. PreToolUse는 수정 전이라 포맷할 내용이 아직 없다. Stop 시 전체 포맷은 범위 과다, CLAUDE.md는 강제가 아니다."}
+  Q9:  {answer: [C], concepts: [D1.loop], why: "assistant 응답(tool_use 블록 포함)을 그대로 history에 붙이고, 다음 user 메시지에 tool_use_id가 맞는 tool_result를 담는다. tool_use가 없는 tool_result는 짝이 맞지 않아 오류."}
+  Q10: {answer: [B], concepts: [D1.handoff], why: "subagent는 coordinator 대화를 모른다 → 목표·필요한 입력·제약·출력 형식을 담은 자기완결적 brief. 전체 history 전달은 context 격리 이점을 없앤다."}
+  Q11: {answer: [A], concepts: [D2.builtin, D2.mcp], why: "사내 시스템 + 비즈니스 규칙 = custom MCP의 전형. 파일 읽기·셸·웹 검색은 플랫폼 built-in이 이미 제공."}
+  Q12: {answer: [D], concepts: [D2.tool-desc], why: "입력 형식 문제는 schema·description에 형식(ISO 8601)과 예시, 상대 날짜 처리 규칙을 명시하는 것이 가장 작은 수정. NLP 서비스 추가·모델 교체는 과잉."}
+  Q13: {answer: [B], concepts: [D4.fewshot], why: "few-shot은 예시 패턴을 강하게 따른다. 예시가 한 유형뿐이면 그 길이·스타일로 수렴 → 다양한 길이·유형의 대표 예시로 교체."}
+  Q14: {answer: [C], concepts: [D4.clarity], why: "Anthropic 가이드: 지시의 이유(맥락)를 설명하면 모델이 목적을 이해해 더 잘 일반화한다. 대문자 반복보다 효과적이고, reviewer 추가는 과잉."}
+  Q15: {answer: [A], concepts: [D5.caching], why: "캐시는 prefix 완전 일치가 조건. 맨 앞의 timestamp가 매번 바뀌면 캐시가 절대 맞지 않는다 → 변하는 값은 breakpoint 뒤로. TTL·breakpoint 추가는 원인과 무관."}
+  Q16: {answer: [D], concepts: [D5.context], why: "긴 대화의 핵심 사실은 요약에 맡기지 말고 구조화된 외부 state로 유지해 매 요청에 포함. 전체 history 유지·큰 모델은 비용만 늘리고 근본 해결이 아니다."}
