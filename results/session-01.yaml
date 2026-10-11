@@ -1,20 +1,48 @@
-# Session 01 답안지
-# answer: 보기 문자 (복수 정답 문항은 "AD" 처럼), confidence: 1(찍음)~5(확실)
-date: ""
+date: '2026-10-11'
 minutes: null
 answers:
-  Q1:  {answer: "", confidence: null}
-  Q2:  {answer: "", confidence: null}
-  Q3:  {answer: "", confidence: null}
-  Q4:  {answer: "", confidence: null}
-  Q5:  {answer: "", confidence: null}
-  Q6:  {answer: "", confidence: null}
-  Q7:  {answer: "", confidence: null}
-  Q8:  {answer: "", confidence: null}
-  Q9:  {answer: "", confidence: null}
-  Q10: {answer: "", confidence: null}
-  Q11: {answer: "", confidence: null}
-  Q12: {answer: "", confidence: null}
-  Q13: {answer: "", confidence: null}
-  Q14: {answer: "", confidence: null}
-  Q15: {answer: "", confidence: null}
+  Q1:
+    answer: C
+    confidence: 4
+  Q2:
+    answer: A
+    confidence: 4
+  Q3:
+    answer: D
+    confidence: 3
+  Q4:
+    answer: B
+    confidence: 3
+  Q5:
+    answer: C
+    confidence: 1
+  Q6:
+    answer: A
+    confidence: 2
+  Q7:
+    answer: D
+    confidence: 2
+  Q8:
+    answer: B
+    confidence: 2
+  Q9:
+    answer: C
+    confidence: 3
+  Q10:
+    answer: BC
+    confidence: 5
+  Q11:
+    answer: D
+    confidence: 1
+  Q12:
+    answer: D
+    confidence: 3
+  Q13:
+    answer: B
+    confidence: 2
+  Q14:
+    answer: C
+    confidence: 1
+  Q15:
+    answer: A
+    confidence: 3
