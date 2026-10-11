@@ -1,0 +1,19 @@
+# Session 01 정답·해설 — 다 풀기 전에는 열지 말 것
+session: "01"
+title: D2·D1 Focus
+questions:
+  Q1:  {answer: [C], concepts: [D2.tool-desc], why: "모호한 범용 tool 하나 → 이름과 설명이 범위를 말하는 tool 둘로 분리. router 모델·프롬프트 당부·temperature는 근본 원인(구분 불가능한 tool 정의)을 그대로 둔다."}
+  Q2:  {answer: [A], concepts: [D2.error], why: "입력 오류는 재시도해도 같은 결과 → non-retryable. 잘못된 필드와 허용값을 알려주면 모델이 입력을 고쳐 다시 호출한다. 조용한 매핑은 의도 왜곡, loop 종료는 과잉 대응."}
+  Q3:  {answer: [D], concepts: [D2.mcp], why: ".mcp.json은 커밋하는 공유 파일이므로 비밀값은 환경변수 참조(${VAR})로 분리. CLAUDE.md나 repo에 토큰을 넣는 것은 유출."}
+  Q4:  {answer: [B], concepts: [D2.surface], why: "least privilege: 역할에 필요한 tool만 노출하고 자격증명도 읽기 범위로. 프롬프트 금지·사후 리뷰·로깅은 실행 자체를 막지 못한다."}
+  Q5:  {answer: [C], concepts: [D2.builtin], why: "플랫폼이 이미 제공하는 기능은 다시 만들지 않는다. custom tool/MCP는 사내 시스템·비즈니스 로직처럼 built-in이 닿지 않는 곳에."}
+  Q6:  {answer: [A], concepts: [D1.loop], why: "한 응답의 모든 tool_use에 대한 tool_result를 하나의 user 메시지에 담아 보낸다. 각 결과는 tool_use_id로 짝지어진다. 나눠 보내면 병렬 tool use 흐름이 깨진다."}
+  Q7:  {answer: [D], concepts: [D1.loop, D2.error], why: "종료 조건(최대 반복)은 loop 설계의 필수 안전장치. 구조화된 non-retryable 오류를 주면 agent가 중단·에스컬레이션을 판단할 수 있다. 프롬프트 당부는 강제가 아니다."}
+  Q8:  {answer: [B], concepts: [D1.hooks], why: "Stop hook은 Claude가 턴을 끝내려 할 때 실행되고, block 결정과 이유를 돌려주면 멈추지 못하고 계속 작업한다. CLAUDE.md는 부탁일 뿐 강제가 아니다."}
+  Q9:  {answer: [C], concepts: [D1.handoff], why: "subagent의 핵심 가치는 context 격리. 원문 transcript를 돌려주면 그 이점이 사라진다. 결과 형식을 압축된 구조로 정하는 것이 원인 수정. coordinator가 다시 요약하면 이미 context를 소모한 뒤다."}
+  Q10: {answer: [A, D], concepts: [D1.pattern], why: "multi-agent는 (1) 독립 작업 + context 격리 이득, (2) 전문화·권한 분리가 필요할 때 정당화된다. 고정 순서는 workflow, 단순 질의는 단일 호출."}
+  Q11: {answer: [A], concepts: [D3.extensions], why: "독립 context + 도구 제한 + 위임해서 결과를 받음 = subagent(.claude/agents/). CLAUDE.md는 상시 지침, hook은 이벤트 강제, permission은 허용 범위."}
+  Q12: {answer: [D], concepts: [D3.claude-md], why: "CLAUDE.md는 매 세션 로드되므로 핵심만. 주제별 규칙은 .claude/rules/로 분리하고 paths frontmatter로 관련 파일에만 적용(공식 문서: ~200줄 넘으면 rules로 분리 권장)."}
+  Q13: {answer: [B], concepts: [D4.structured], why: "tool_choice로 특정 tool을 강제하면 응답이 반드시 그 tool 호출(=schema 형식)이 된다. 대문자 당부·regex·무한 재시도는 증상 처리."}
+  Q14: {answer: [C], concepts: [D4.validation], why: "schema는 형식만 보장하고 필드 간 산술 같은 비즈니스 규칙은 못 잡는다 → 코드 검증 + 구체적 오류를 담은 targeted retry + 횟수 제한·사람 검토."}
+  Q15: {answer: [A], concepts: [D5.ambiguity], why: "모호함이 결과를 크게 바꾸고 행동이 파괴적·비가역 → 실행 전 확인. 사소하고 되돌릴 수 있는 모호함이면 가정을 명시하고 진행."}
